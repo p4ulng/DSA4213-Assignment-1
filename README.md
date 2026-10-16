@@ -1,6 +1,14 @@
 # DSA4213 Assignment 1
 
-This project compares a smoothed interpolated trigram, an RNN, an LSTM, and a causal Transformer on WikiText-2 raw. The neural language models are trained from scratch.
+This is an individual project assignment. It covers language modeling, word embeddings, RNNs, LSTMs,
+Transformers, and learned representations. I compared model families on wikitext-2-raw-v1
+examined the effect of embedding choices, and evaluated whether the learned representations help
+a downstream task. 
+On this corpus and under a fixed training budget, 
+I seek to answer 3 questions:
+How do (1) the sequence-model family and (2) the source of the input embeddings affect next-token prediction, 
+and (3) does the better language model also provide better frozen features for text classification?
+
 
 Most of the findings are found on the juypter notebooks. The notebooks run functions from the python files under src folder.
 

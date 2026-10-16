@@ -2,6 +2,9 @@
 
 This project compares a smoothed interpolated trigram, an RNN, an LSTM, and a causal Transformer on WikiText-2 raw. The neural language models are trained from scratch.
 
+Most of the findings are found on the juypter notebooks. The notebooks run functions from the python files under src folder.
+
+
 ## Setup
 
 ```bash
@@ -45,10 +48,6 @@ Part II generation reuses those prompts and decoding settings for the Part I ran
 ```bash
 python src/generate_embedding_compare.py --data data/processed_3m_max_tokens_30k_vocab --runs . --out results/part2_generation.json --new-tokens 30 --temperature 0.8 --top-k 40 --seed 42
 ```
-
-The saved output is included in the Part II generation appendix of `reports/Assignment_1_Report.md`.
-
-The final notebook reporting cell rebuilds the training-loss figure, refreshes `reports/Part_I_Analysis.md` and its PDF in place from the new run artifacts, and places decoded continuations in Appendix A.
 
 ## Part II: embedding variants
 

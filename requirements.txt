@@ -1,0 +1,11 @@
+torch>=2.3
+numpy>=1.26
+datasets>=2.19
+sentencepiece>=0.2.0
+matplotlib>=3.8
+pandas>=2.2
+scikit-learn>=1.4
+gensim>=4.4.0
+notebook>=7
+ipykernel>=6
+Pillow>=10

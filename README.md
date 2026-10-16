@@ -1,4 +1,4 @@
-# DSA4213 Assignment 1 — Part I
+# DSA4213 Assignment 1
 
 This project compares a smoothed interpolated trigram, an RNN, an LSTM, and a causal Transformer on WikiText-2 raw. The neural language models are trained from scratch.
 
@@ -22,7 +22,7 @@ python src/data.py --out data/processed_3m_max_tokens_30k_vocab --max-train-toke
 
 SentencePiece BPE replaces the previous word-level tokenizer. It learns a 30,000-piece vocabulary from WikiText-2 training text, applies NFKC case-fold normalization and byte fallback, and appends `<eos>` after each nonempty source line. The train stream uses up to 3,000,000 subword IDs; if the encoded training corpus exceeds that cap, source lines are sampled reproducibly across the split and returned to source order before truncation. Validation and test remain complete. The saved `tokenizer.model` is shared by all models and used to decode generated text.
 
-## Train and compare models
+## Part1 - Train and compare models
 
 ```bash
 python src/ngram.py --data data/processed_3m_max_tokens_30k_vocab

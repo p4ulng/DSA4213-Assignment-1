@@ -1,0 +1,79 @@
+{
+  "settings": {
+    "new_tokens": 30,
+    "temperature": 0.8,
+    "top_k": 40,
+    "seed": 42,
+    "device": "cpu"
+  },
+  "continuations": {
+    "trigram": [
+      {
+        "prompt": "The scientist studied",
+        "continuation": "the scientist studied , who had been <unk> the <unk> ' s \" <unk> at a <unk> <eos> the <unk> of the <unk> of <unk> , the <unk> in the album was <unk>",
+        "generation_seconds": 0.3037051251158118
+      },
+      {
+        "prompt": "The government announced",
+        "continuation": "the government announced the and <unk> the <unk> ' s , <unk> and <unk> a <unk> <unk> that the <unk> , <unk> to be able to provide and . <unk> ) , the",
+        "generation_seconds": 0.30065929191187024
+      },
+      {
+        "prompt": "In the history of",
+        "continuation": "in the history of of <unk> and <unk> , and the <unk> of the town of the <unk> , who died ) of the other <unk> . he was also set the . <eos>",
+        "generation_seconds": 0.2967821671627462
+      }
+    ],
+    "rnn": [
+      {
+        "prompt": "The scientist studied",
+        "continuation": "the scientist studied , or a <unk> , <unk> <unk> and <unk> . <unk> described that the \" <unk> of the song , \" <unk> and <unk> \" . <eos> = = =",
+        "generation_seconds": 0.016739957965910435
+      },
+      {
+        "prompt": "The government announced",
+        "continuation": "the government announced the north . <eos> in march 1950 , <unk> and <unk> to the <unk> on the united states , but not affect the lack of the <unk> to <unk> the",
+        "generation_seconds": 0.014240000396966934
+      },
+      {
+        "prompt": "In the history of",
+        "continuation": "in the history of \" <unk> \" , and \" <unk> \" , \" we have not to be able to create a <unk> of <unk> . his <unk> was written to a <unk>",
+        "generation_seconds": 0.014133916702121496
+      }
+    ],
+    "lstm": [
+      {
+        "prompt": "The scientist studied",
+        "continuation": "the scientist studied the royal society of <unk> , <unk> and <unk> . <unk> later , <unk> <unk> , <unk> , <unk> , the <unk> , the <unk> and <unk> , and <unk>",
+        "generation_seconds": 0.019719749689102173
+      },
+      {
+        "prompt": "The government announced",
+        "continuation": "the government announced a two @ - @ hour ( <unk> , and <unk> ) , <unk> by <unk> , <unk> <unk> and <unk> ; <unk> are <unk> and <unk> ) , and",
+        "generation_seconds": 0.018335875123739243
+      },
+      {
+        "prompt": "In the history of",
+        "continuation": "in the history of the <unk> and <unk> <unk> . <eos> = = = composition = = <eos> the corn crake has been <unk> for the first player of the same time . <eos>",
+        "generation_seconds": 0.018787208944559097
+      }
+    ],
+    "transformer": [
+      {
+        "prompt": "The scientist studied",
+        "continuation": "the scientist studied . all of the <unk> , <unk> on the original <unk> are used in the <unk> , and the <unk> of <unk> , the <unk> of <unk> , and <unk>",
+        "generation_seconds": 0.027316333260387182
+      },
+      {
+        "prompt": "The government announced",
+        "continuation": "the government announced to be <unk> . <eos> = = = <unk> = = = <eos> the treaty of the war , were assigned to the atlantic ocean of <unk> on the day",
+        "generation_seconds": 0.023999707773327827
+      },
+      {
+        "prompt": "In the history of",
+        "continuation": "in the history of england , it was not used in the early 1950 s . <eos> the <unk> version was subsequently brought to the <unk> of the <unk> of a <unk> . <eos>",
+        "generation_seconds": 0.023458417039364576
+      }
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "settings": {
+    "new_tokens": 30,
+    "temperature": 0.8,
+    "top_k": 40,
+    "seed": 42,
+    "device": "mps",
+    "tokenizer": "SentencePiece BPE",
+    "eos_stopping": true,
+    "pad_suppressed": true
+  },
+  "continuations": {
+    "trigram": [
+      {
+        "prompt": "The scientist studied",
+        "continuation": ", when he is a in a similar to \"",
+        "text": "the scientist studied , when he is a in a similar to \"",
+        "generated_tokens": 10,
+        "stopped_at_eos": true,
+        "generation_seconds": 0.48409341694787145
+      },
+      {
+        "prompt": "The government announced",
+        "continuation": "the song , the new zealand for the the end of the new , which was .",
+        "text": "the government announced the song , the new zealand for the the end of the new , which was .",
+        "generated_tokens": 17,
+        "stopped_at_eos": true,
+        "generation_seconds": 0.818388958927244
+      },
+      {
+        "prompt": "In the history of",
+        "continuation": ", the episode of the second @-@ to , 's \" .",
+        "text": "in the history of , the episode of the second @-@ to , 's \" .",
+        "generated_tokens": 13,
+        "stopped_at_eos": true,
+        "generation_seconds": 0.6630222909152508
+      }
+    ],
+    "rnn": [
+      {
+        "prompt": "The scientist studied",
+        "continuation": "in order to become a new year with the club , though they were not in the same year . in the series , the church of scientology 's",
+        "text": "the scientist studied in order to become a new year with the club , though they were not in the same year . in the series , the church of scientology 's",
+        "generated_tokens": 30,
+        "stopped_at_eos": false,
+        "generation_seconds": 0.7143454160541296
+      },
+      {
+        "prompt": "The government announced",
+        "continuation": "the area .",
+        "text": "the government announced the area .",
+        "generated_tokens": 3,
+        "stopped_at_eos": true,
+        "generation_seconds": 0.009457624983042479
+      },
+      {
+        "prompt": "In the history of",
+        "continuation": "the song \" .",
+        "text": "in the history of the song \" .",
+        "generated_tokens": 4,
+        "stopped_at_eos": true,
+        "generation_seconds": 0.012207208201289177
+      }
+    ],
+    "lstm": [
+      {
+        "prompt": "The scientist studied",
+        "continuation": "in england and .",
+        "text": "the scientist studied in england and .",
+        "generated_tokens": 4,
+        "stopped_at_eos": true,
+        "generation_seconds": 0.6345852501690388
+      },
+      {
+        "prompt": "The government announced",
+        "continuation": "the team of the game 's final , but he could be a better to be a \" perfect boy [ in love \" and the songs of the",
+        "text": "the government announced the team of the game 's final , but he could be a better to be a \" perfect boy [ in love \" and the songs of the",
+        "generated_tokens": 30,
+        "stopped_at_eos": false,
+        "generation_seconds": 0.2458527502603829
+      },
+      {
+        "prompt": "In the history of",
+        "continuation": "the time of the season .",
+        "text": "in the history of the time of the season .",
+        "generated_tokens": 6,
+        "stopped_at_eos": true,
+        "generation_seconds": 0.015694207977503538
+      }
+    ],
+    "transformer": [
+      {
+        "prompt": "The scientist studied",
+        "continuation": "the languedoc as \" a \" a lion \" and a.v. \" the part of the city \" , and the city 's third army ,",
+        "text": "the scientist studied the languedoc as \" a \" a lion \" and a.v. \" the part of the city \" , and the city 's third army ,",
+        "generated_tokens": 30,
+        "stopped_at_eos": false,
+        "generation_seconds": 5.936918958090246
+      },
+      {
+        "prompt": "The government announced",
+        "continuation": ", \" the most important parties that he was not to make the \" big \" .",
+        "text": "the government announced , \" the most important parties that he was not to make the \" big \" .",
+        "generated_tokens": 17,
+        "stopped_at_eos": true,
+        "generation_seconds": 0.05422866623848677
+      },
+      {
+        "prompt": "In the history of",
+        "continuation": "the new kingdom .",
+        "text": "in the history of the new kingdom .",
+        "generated_tokens": 4,
+        "stopped_at_eos": true,
+        "generation_seconds": 0.01419841730967164
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "settings": {
+    "prompts": [
+      "The scientist studied",
+      "The government announced",
+      "In the history of"
+    ],
+    "new_tokens_max": 30,
+    "temperature": 0.8,
+    "top_k": 40,
+    "seed": 42,
+    "device": "cpu",
+    "tokenizer": "SentencePiece BPE",
+    "eos_stopping": true,
+    "pad_suppressed": true,
+    "common_workload": true
+  },
+  "conditions": {
+    "random_trainable": {
+      "description": "Part I LSTM; random input embeddings learned jointly",
+      "checkpoint": "runs/revised/lstm/best.pt",
+      "samples": [
+        {
+          "prompt": "The scientist studied",
+          "continuation": "at the age of the country . \"",
+          "text": "the scientist studied at the age of the country . \"",
+          "generated_tokens": 8,
+          "stopped_at_eos": true,
+          "generation_seconds": 0.03819487476721406
+        },
+        {
+          "prompt": "The government announced",
+          "continuation": "that the \" big boy \" is a part of all time of the season , and has been known as their ownisation — the first person .",
+          "text": "the government announced that the \" big boy \" is a part of all time of the season , and has been known as their ownisation — the first person .",
+          "generated_tokens": 29,
+          "stopped_at_eos": true,
+          "generation_seconds": 0.05968354223296046
+        },
+        {
+          "prompt": "In the history of",
+          "continuation": "the film . these were recorded , and that he does not believe her with a limited edition of the song as a song .",
+          "text": "in the history of the film . these were recorded , and that he does not believe her with a limited edition of the song as a song .",
+          "generated_tokens": 25,
+          "stopped_at_eos": true,
+          "generation_seconds": 0.04961845790967345
+        }
+      ]
+    },
+    "skipgram_frozen": {
+      "description": "LSTM; corpus-trained Skip-gram input embeddings frozen",
+      "checkpoint": "runs/part2_revised/skipgram/lstm/best.pt",
+      "samples": [
+        {
+          "prompt": "The scientist studied",
+          "continuation": "that \" some people of scientology were told in the early 1819 to this \" , \" a lot of being \" too successful for the song , \" as",
+          "text": "the scientist studied that \" some people of scientology were told in the early 1819 to this \" , \" a lot of being \" too successful for the song , \" as",
+          "generated_tokens": 30,
+          "stopped_at_eos": false,
+          "generation_seconds": 0.05551750026643276
+        },
+        {
+          "prompt": "The government announced",
+          "continuation": "that the first nations for the british government in the federal government , and the first time since they had been scheduled to purchase funds , and that the ship",
+          "text": "the government announced that the first nations for the british government in the federal government , and the first time since they had been scheduled to purchase funds , and that the ship",
+          "generated_tokens": 30,
+          "stopped_at_eos": false,
+          "generation_seconds": 0.05410916684195399
+        },
+        {
+          "prompt": "In the history of",
+          "continuation": "the city . while the university of st. louis. smith had previously called a way that \" the first leg of the \" was chosen to his right",
+          "text": "in the history of the city . while the university of st. louis. smith had previously called a way that \" the first leg of the \" was chosen to his right",
+          "generated_tokens": 30,
+          "stopped_at_eos": false,
+          "generation_seconds": 0.056527082808315754
+        }
+      ]
+    },
+    "glove_frozen": {
+      "description": "LSTM; public GloVe input embeddings frozen",
+      "checkpoint": "runs/part2_revised/glove/lstm/best.pt",
+      "samples": [
+        {
+          "prompt": "The scientist studied",
+          "continuation": "that the gods were the principal member of the government . this is only to be the first word to be the oldest deity of the roman of the kings",
+          "text": "the scientist studied that the gods were the principal member of the government . this is only to be the first word to be the oldest deity of the roman of the kings",
+          "generated_tokens": 30,
+          "stopped_at_eos": false,
+          "generation_seconds": 0.05727929109707475
+        },
+        {
+          "prompt": "The government announced",
+          "continuation": "that the \" never ever in \" .",
+          "text": "the government announced that the \" never ever in \" .",
+          "generated_tokens": 8,
+          "stopped_at_eos": true,
+          "generation_seconds": 0.015707917045801878
+        },
+        {
+          "prompt": "In the history of",
+          "continuation": "the north of kent , who was in the same way in october 1913 .",
+          "text": "in the history of the north of kent , who was in the same way in october 1913 .",
+          "generated_tokens": 15,
+          "stopped_at_eos": true,
+          "generation_seconds": 0.029188750311732292
+        }
+      ]
+    }
+  }
+}

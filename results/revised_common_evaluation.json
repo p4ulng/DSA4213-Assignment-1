@@ -1,0 +1,245 @@
+{
+  "evaluation": "common targets at positions >= 2; rolling context is up to 32 preceding tokens",
+  "device": "mps",
+  "hardware": {
+    "system": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "processor": "arm",
+    "torch_version": "2.14.1",
+    "device": "mps",
+    "model": "Mac14,2",
+    "chip": "Apple M2",
+    "memory_bytes": 17179869184
+  },
+  "context": 32,
+  "inference_batch_size": 128,
+  "timing_repeats": 3,
+  "context_comparison": "rolling full window versus chunk_matched train.py reset boundaries",
+  "models": {
+    "rnn": {
+      "test_loss": 5.887261848522703,
+      "test_ppl": 360.41705553653736,
+      "test_tokens": 272267,
+      "timing": {
+        "forward_seconds_median": 9.00535612506792,
+        "forward_tokens_per_second": 30233.895941338636,
+        "end_to_end_seconds_median": 15.495902833063155,
+        "end_to_end_tokens_per_second": 17570.257308213877,
+        "repeats": 3,
+        "warmup_batches": 1,
+        "forward_scope": "prebuilt device tensors; model forward only",
+        "end_to_end_scope": "window construction, tensor creation/device transfer, forward, and cross-entropy"
+      },
+      "inference_seconds": 15.495902833063155,
+      "tokens_per_second": 17570.257308213877,
+      "context_comparisons": {
+        "rolling_32": {
+          "test_loss": 5.887261848522703,
+          "test_ppl": 360.41705553653736,
+          "test_tokens": 272267,
+          "timing": {
+            "forward_seconds_median": 9.00535612506792,
+            "forward_tokens_per_second": 30233.895941338636,
+            "end_to_end_seconds_median": 15.495902833063155,
+            "end_to_end_tokens_per_second": 17570.257308213877,
+            "repeats": 3,
+            "warmup_batches": 1,
+            "forward_scope": "prebuilt device tensors; model forward only",
+            "end_to_end_scope": "window construction, tensor creation/device transfer, forward, and cross-entropy"
+          },
+          "inference_seconds": 15.495902833063155,
+          "tokens_per_second": 17570.257308213877
+        },
+        "chunk_matched_32": {
+          "test_loss": 5.917606518373465,
+          "test_ppl": 371.52141915856095,
+          "test_tokens": 272267,
+          "timing": {
+            "measured": false
+          }
+        },
+        "rolling_2": {
+          "test_loss": 6.065416578426587,
+          "test_ppl": 430.7020614929948,
+          "test_tokens": 272267,
+          "timing": {
+            "measured": false
+          }
+        }
+      },
+      "parameters": 6899440,
+      "serialized_size_bytes": 27600554,
+      "serialized_artifact": "/Users/paulng/Y4S1 Local files/DSA4213/dsa4213_oct13/runs/revised/rnn/best.pt",
+      "training_hardware": {
+        "system": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "processor": "arm",
+        "torch_version": "2.14.1",
+        "device": "mps",
+        "model": "Mac14,2",
+        "chip": "Apple M2",
+        "memory_bytes": 17179869184
+      },
+      "training_seconds": 2173.77,
+      "training_time_basis": "sum of synchronized train-epoch times; excludes validation and startup"
+    },
+    "lstm": {
+      "test_loss": 5.85796127300001,
+      "test_ppl": 350.00984161915784,
+      "test_tokens": 272267,
+      "timing": {
+        "forward_seconds_median": 12.837607666384429,
+        "forward_tokens_per_second": 21208.546566891695,
+        "end_to_end_seconds_median": 13.123198083601892,
+        "end_to_end_tokens_per_second": 20747.000713203557,
+        "repeats": 3,
+        "warmup_batches": 1,
+        "forward_scope": "prebuilt device tensors; model forward only",
+        "end_to_end_scope": "window construction, tensor creation/device transfer, forward, and cross-entropy"
+      },
+      "inference_seconds": 13.123198083601892,
+      "tokens_per_second": 20747.000713203557,
+      "context_comparisons": {
+        "rolling_32": {
+          "test_loss": 5.85796127300001,
+          "test_ppl": 350.00984161915784,
+          "test_tokens": 272267,
+          "timing": {
+            "forward_seconds_median": 12.837607666384429,
+            "forward_tokens_per_second": 21208.546566891695,
+            "end_to_end_seconds_median": 13.123198083601892,
+            "end_to_end_tokens_per_second": 20747.000713203557,
+            "repeats": 3,
+            "warmup_batches": 1,
+            "forward_scope": "prebuilt device tensors; model forward only",
+            "end_to_end_scope": "window construction, tensor creation/device transfer, forward, and cross-entropy"
+          },
+          "inference_seconds": 13.123198083601892,
+          "tokens_per_second": 20747.000713203557
+        },
+        "chunk_matched_32": {
+          "test_loss": 5.893643190236328,
+          "test_ppl": 362.7243539273481,
+          "test_tokens": 272267,
+          "timing": {
+            "measured": false
+          }
+        },
+        "rolling_2": {
+          "test_loss": 6.047903982484999,
+          "test_ppl": 423.2250126805345,
+          "test_tokens": 272267,
+          "timing": {
+            "measured": false
+          }
+        }
+      },
+      "parameters": 6987760,
+      "serialized_size_bytes": 27953834,
+      "serialized_artifact": "/Users/paulng/Y4S1 Local files/DSA4213/dsa4213_oct13/runs/revised/lstm/best.pt",
+      "training_hardware": {
+        "system": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "processor": "arm",
+        "torch_version": "2.14.1",
+        "device": "mps",
+        "model": "Mac14,2",
+        "chip": "Apple M2",
+        "memory_bytes": 17179869184
+      },
+      "training_seconds": 2413.23,
+      "training_time_basis": "sum of synchronized train-epoch times; excludes validation and startup"
+    },
+    "transformer": {
+      "test_loss": 5.685627883014269,
+      "test_ppl": 294.6027630621561,
+      "test_tokens": 272267,
+      "timing": {
+        "forward_seconds_median": 22.162354874890298,
+        "forward_tokens_per_second": 12285.111466583161,
+        "end_to_end_seconds_median": 20.682932374998927,
+        "end_to_end_tokens_per_second": 13163.849064705659,
+        "repeats": 3,
+        "warmup_batches": 1,
+        "forward_scope": "prebuilt device tensors; model forward only",
+        "end_to_end_scope": "window construction, tensor creation/device transfer, forward, and cross-entropy"
+      },
+      "inference_seconds": 20.682932374998927,
+      "tokens_per_second": 13163.849064705659,
+      "context_comparisons": {
+        "rolling_32": {
+          "test_loss": 5.685627883014269,
+          "test_ppl": 294.6027630621561,
+          "test_tokens": 272267,
+          "timing": {
+            "forward_seconds_median": 22.162354874890298,
+            "forward_tokens_per_second": 12285.111466583161,
+            "end_to_end_seconds_median": 20.682932374998927,
+            "end_to_end_tokens_per_second": 13163.849064705659,
+            "repeats": 3,
+            "warmup_batches": 1,
+            "forward_scope": "prebuilt device tensors; model forward only",
+            "end_to_end_scope": "window construction, tensor creation/device transfer, forward, and cross-entropy"
+          },
+          "inference_seconds": 20.682932374998927,
+          "tokens_per_second": 13163.849064705659
+        },
+        "chunk_matched_32": {
+          "test_loss": 5.765916832334021,
+          "test_ppl": 319.23159175251175,
+          "test_tokens": 272267,
+          "timing": {
+            "measured": false
+          }
+        },
+        "rolling_2": {
+          "test_loss": 6.039033165723826,
+          "test_ppl": 419.4872640963821,
+          "test_tokens": 272267,
+          "timing": {
+            "measured": false
+          }
+        }
+      },
+      "parameters": 7312240,
+      "serialized_size_bytes": 29257693,
+      "serialized_artifact": "/Users/paulng/Y4S1 Local files/DSA4213/dsa4213_oct13/runs/revised/transformer/best.pt",
+      "training_hardware": {
+        "system": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "processor": "arm",
+        "torch_version": "2.14.1",
+        "device": "mps",
+        "model": "Mac14,2",
+        "chip": "Apple M2",
+        "memory_bytes": 17179869184
+      },
+      "training_seconds": 2462.59,
+      "training_time_basis": "sum of synchronized train-epoch times; excludes validation and startup"
+    },
+    "trigram": {
+      "test_loss": 7.196199228849472,
+      "test_ppl": 1334.349556957163,
+      "test_tokens": 272267,
+      "timing": {
+        "forward_seconds_median": 0.3923044577240944,
+        "forward_tokens_per_second": 694019.6437723986,
+        "end_to_end_seconds_median": 0.3830223330296576,
+        "end_to_end_tokens_per_second": 710838.4460154135,
+        "repeats": 3,
+        "warmup_predictions": 256,
+        "forward_scope": "prebuilt (context, target) triples; probability computation only",
+        "end_to_end_scope": "test-stream indexing, probability computation, and loss accumulation"
+      },
+      "inference_seconds": 0.3830223330296576,
+      "tokens_per_second": 710838.4460154135,
+      "training_seconds": 1.4427938326261938,
+      "training_time_basis": "single fit on the training stream",
+      "stored_unigrams": 28137,
+      "stored_bigrams": 682945,
+      "stored_trigrams": 1525005,
+      "serialized_size_bytes": 26776875,
+      "serialized_artifact": "/Users/paulng/Y4S1 Local files/DSA4213/dsa4213_oct13/runs/revised/trigram.pkl"
+    }
+  }
+}

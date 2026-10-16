@@ -1,0 +1,7 @@
+{
+  "model": "trigram",
+  "train_seconds": 1.9304393329657614,
+  "validation_ppl": 1280.4488367640586,
+  "test_ppl": 1334.349556957163,
+  "vocab_size": 30000
+}

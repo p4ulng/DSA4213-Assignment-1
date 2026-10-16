@@ -1,0 +1,111 @@
+{
+  "evaluation": "common targets at positions >= 2; rolling context is up to 32 preceding tokens",
+  "device": "mps",
+  "hardware": {
+    "system": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "processor": "arm",
+    "torch_version": "2.14.1",
+    "device": "mps",
+    "model": "Mac14,2",
+    "chip": "Apple M2",
+    "memory_bytes": 17179869184
+  },
+  "context": 32,
+  "inference_batch_size": 128,
+  "timing_repeats": 3,
+  "context_comparison": "rolling full window versus chunk_matched train.py reset boundaries",
+  "models": {
+    "lstm": {
+      "test_loss": 5.7166269134917265,
+      "test_ppl": 303.8781848866367,
+      "test_tokens": 272267,
+      "timing": {
+        "forward_seconds_median": 8.95317287510261,
+        "forward_tokens_per_second": 30410.113129517744,
+        "end_to_end_seconds_median": 12.84615141665563,
+        "end_to_end_tokens_per_second": 21194.441134096647,
+        "repeats": 3,
+        "warmup_batches": 1,
+        "forward_scope": "prebuilt device tensors; model forward only",
+        "end_to_end_scope": "window construction, tensor creation/device transfer, forward, and cross-entropy"
+      },
+      "inference_seconds": 12.84615141665563,
+      "tokens_per_second": 21194.441134096647,
+      "context_comparisons": {
+        "rolling_32": {
+          "test_loss": 5.7166269134917265,
+          "test_ppl": 303.8781848866367,
+          "test_tokens": 272267,
+          "timing": {
+            "forward_seconds_median": 8.95317287510261,
+            "forward_tokens_per_second": 30410.113129517744,
+            "end_to_end_seconds_median": 12.84615141665563,
+            "end_to_end_tokens_per_second": 21194.441134096647,
+            "repeats": 3,
+            "warmup_batches": 1,
+            "forward_scope": "prebuilt device tensors; model forward only",
+            "end_to_end_scope": "window construction, tensor creation/device transfer, forward, and cross-entropy"
+          },
+          "inference_seconds": 12.84615141665563,
+          "tokens_per_second": 21194.441134096647
+        },
+        "chunk_matched_32": {
+          "test_loss": 5.782929280604189,
+          "test_ppl": 324.708962329239,
+          "test_tokens": 272267,
+          "timing": {
+            "measured": false
+          }
+        },
+        "rolling_2": {
+          "test_loss": 6.028869570929274,
+          "test_ppl": 415.245358542435,
+          "test_tokens": 272267,
+          "timing": {
+            "measured": false
+          }
+        }
+      },
+      "parameters": 6987760,
+      "serialized_size_bytes": 27953834,
+      "serialized_artifact": "/Users/paulng/Y4S1 Local files/DSA4213/dsa4213_oct13/runs/part2_revised/skipgram/lstm/best.pt",
+      "training_hardware": {
+        "system": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "processor": "arm",
+        "torch_version": "2.14.1",
+        "device": "mps",
+        "model": "Mac14,2",
+        "chip": "Apple M2",
+        "memory_bytes": 17179869184
+      },
+      "training_seconds": 3473.09,
+      "training_time_basis": "sum of synchronized train-epoch times; excludes validation and startup"
+    },
+    "trigram": {
+      "test_loss": 7.196199228849472,
+      "test_ppl": 1334.349556957163,
+      "test_tokens": 272267,
+      "timing": {
+        "forward_seconds_median": 0.38003316707909107,
+        "forward_tokens_per_second": 716429.5740096201,
+        "end_to_end_seconds_median": 0.3538946248590946,
+        "end_to_end_tokens_per_second": 769344.8299996216,
+        "repeats": 3,
+        "warmup_predictions": 256,
+        "forward_scope": "prebuilt (context, target) triples; probability computation only",
+        "end_to_end_scope": "test-stream indexing, probability computation, and loss accumulation"
+      },
+      "inference_seconds": 0.3538946248590946,
+      "tokens_per_second": 769344.8299996216,
+      "training_seconds": 2.4213939579203725,
+      "training_time_basis": "single fit on the training stream",
+      "stored_unigrams": 28137,
+      "stored_bigrams": 682945,
+      "stored_trigrams": 1525005,
+      "serialized_size_bytes": 26776875,
+      "serialized_artifact": "/Users/paulng/Y4S1 Local files/DSA4213/dsa4213_oct13/runs/part2_revised/skipgram/trigram.pkl"
+    }
+  }
+}
